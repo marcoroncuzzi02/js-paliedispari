@@ -43,17 +43,31 @@ else{
 }
 //es2
 
-// let sceltaUtente = prompt("scegli pari o dispari")
-// let numeroUtente = prompt("scegli un numero da 1 a 5")
+let sceltaUtente = prompt("scegli pari o dispari")
+let numeroUtente = prompt("scegli un numero da 1 a 5")
 
-// let numeroComputer = createRandomNumber(1,6);
+function createRandomNumber(min,max){
+    return Math.floor((Math.random() * max) + min); 
+}
+
+let numeroComputer = createRandomNumber(1,5);
+
+console.log(`il numero dell'utente è: ${numeroUtente}`)
+console.log(`il numero del computer è: ${numeroComputer}`)
+console.log(`la scelta dell'utente è ${sceltaUtente}`)
+
+function somma (a,b){
+    return a + b
+}
+
+if (somma(numeroComputer,numeroUtente) % 2 ==0){
+    console.log("il numero è pari")
+}
+else{
+    console.log("il numero è dispari")
+}
 // myLog('Ciao Sono Marco'); //FUNZIONE SENZA RETURN
 // console.log(myOtherLog('Ciao Sono Marco'));  //FUNZIONE CON RETURN
-
-// function createRandomNumber(min,max){
-//     return Math.floor((Math.random() * max) + min); 
-//     console.log('non lo fa questo');
-// }
 
 // function myLog(text){
 //     console.log(text);
